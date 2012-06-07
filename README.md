@@ -57,12 +57,12 @@ end
 
 This should yeild the following behaviour:
 
-`
+```
 User: Marco
 Bot:  Polo!
 User: My_name_is alex sayers
 Bot:  Nice to meet you, Alex Sayers!
-`
+```
 
 To Do
 -----
