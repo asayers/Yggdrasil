@@ -7,8 +7,8 @@ Overview
 --------
 
 This tweetbot listens for direct messages (DMs) sent to a particular twitter
-account. When the tweetbot recieves a DM, the message is parsed as a "command
-args" string (not case sensative). Some relevant code is executed, and a DM is
+account. When the tweetbot recieves a DM, the message is parsed as a `command
+args` string (not case sensative). Some relevant code is executed, and a DM is
 sent back in response. The beauty of this system is that a twitter account can
 only recieve DMs from accounts which it is following; therefore the only people
 who can use the tweetbot are the people whose accounts it is following.
@@ -41,24 +41,26 @@ DM needs to be sent before the method is finished executing).
 
 Example:
 
-     class Parser
-          def marco args
-               ["Polo!"]
-          end
-
-          def my_name_is args
-               args.each { |s| s.capitalize! }
-               name = args.join(" ")
-               ["Nice to meet you, #{name}!"]
-          end
+```ruby
+class Parser
+     def marco args
+          ["Polo!"]
      end
+
+     def my_name_is args
+          args.each { |s| s.capitalize! }
+          name = args.join(" ")
+          ["Nice to meet you, #{name}!"]
+     end
+end
+```
 
 This should yeild the following behaviour:
 
      User: Marco
-     Bot: Polo!
+     Bot:  Polo!
      User: My_name_is alex sayers
-     Bot: Nice to meet you, Alex Sayers!
+     Bot:  Nice to meet you, Alex Sayers!
 
 To Do
 -----
