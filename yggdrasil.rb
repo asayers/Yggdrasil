@@ -107,6 +107,12 @@ class Parser
           [info]
      end
 
+     def say args
+          # Use the say command to speak args out loud. Install espeak and create a symlink to it called "say"
+          system("say \"#{args.join(" ")}\"")
+          nil
+     end
+
      def help args
           commands = ""
           self.methods.each do |m|
